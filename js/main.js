@@ -34,6 +34,14 @@ $( document ).ready(function() {
     
     
   });
-    
+   
+  $("#sign_out").on("click", function(event){    
+    // Does not work from Localhost: 
+    // Clear your browsing history instead  
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User may have signed out, but probably not if you are on localhost');  
+    });
+  });
 });
 

@@ -59,5 +59,5 @@ function appendOption(value, select) {
   option.text = value.name;
   select.append(option);
     
-  console.log(select);    
+  //console.log(select);    
 }
