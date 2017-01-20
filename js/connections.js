@@ -1,14 +1,14 @@
 
 var base_url = "http://localhost:3000/";
 
-function callServer(path, table) {
+function callServer(path, table, select) {
 
   var url = base_url + path;
 
   $.getJSON(url, function(data) {
     //console.log(data);
 
-    postResults(data, table);
+    postResults(data, table, select);
   });
 }
 

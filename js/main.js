@@ -2,7 +2,9 @@ $( document ).ready(function() {
 
   var proj_list = $("#projects");
   var proj_table = setupTable(proj_list);
-  callServer("projects", proj_table);
+  var $select = $("#project_select");
+
+  callServer("projects", proj_table, $select);
    
   /*var user_list = $("#users");
   var user_table = setupTable(user_list);
@@ -26,6 +28,12 @@ $( document ).ready(function() {
     var id = row.firstChild.innerHTML;
     deleteEntity("projects", id);  
   });
-
+  
+  $("#entry_button").on("click", function(event){    
+    console.log("Clicked entry " + event.target);
+    
+    
+  });
+    
 });
 

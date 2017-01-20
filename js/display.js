@@ -1,9 +1,3 @@
-/* function setupTables() {
-
-   var user_list = $("#users");
-   setupTable(user_list);    
-}*/
-
 function setupTable(tableContainer) {
 
   var table = document.createElement('table');
@@ -21,13 +15,14 @@ function setupTable(tableContainer) {
   return table;    
 }
 
-function postResults(data, table) {
+function postResults(data, table, select) {
     
    //console.log(data);    
-   var proj_list = $("#project_list");
+   // var proj_list = $("#project_list");
     
    $.each(data, function(key, value) {
      appendResult(value, table);
+     appendOption(value, select);   
    });    
 }
 
@@ -42,7 +37,7 @@ function appendResult(value, table) {
   var td2 = document.createElement('td'); 
   td2.innerHTML = value.name;  
     
-  // Delete note working    
+  // Delete not working in rails    
   //var td3 = document.createElement('td'); 
   //var button = document.createElement('button');
   //button.className = "delete";
@@ -57,4 +52,12 @@ function appendResult(value, table) {
   // row.appendChild(td3);      
 }
 
-
+function appendOption(value, select) {
+ 
+  var option = document.createElement("option");
+  option.value = value.id;
+  option.text = value.name;
+  select.append(option);
+    
+  console.log(select);    
+}

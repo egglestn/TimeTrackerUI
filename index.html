@@ -24,13 +24,13 @@
         <div class="g-signin2" data-onsuccess="onSignIn">
         </div>
         <div class="signout">    
-          <button onclick="signOut();">Sign out</button>
+          <button onclick="signOut()">Sign out</button>
         </div>
       </div>
         
       <div id="project">
         <label>Project name</label>
-        <input type="text" id="project_name" placeholder="Project name"></textfield>
+        <input type="text" id="project_name" placeholder="Project name"></input>
         <button id="project_button">Add new project</button>
       </div>
 
@@ -39,7 +39,19 @@
       </div-->
       
       <div id="entries" class="column right">
-          <h3> Entries </h3>
+        <h3> Entries </h3>
+        <div>
+          <label>Project name</label>
+          <select id="project_select"></select>
+          <br>
+          <label>Day worked on</label>
+          <input type="date" id="date_select"></input>
+          <br>
+          <label>Hours</label>
+          <input type="integer" id="hours_select"></input>
+          <br>
+          <button id="entry_button">Submit</button>
+        </div>
       </div>
       
       <div id="projects" class="column">
