@@ -1,0 +1,54 @@
+
+<html>
+  <head>
+    
+    <script   src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script src="js/connections.js"></script>
+    <script src="js/display.js"></script>
+    <script src="js/signin.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <link rel="stylesheet" href="styling/font-awesome-4.7.0/css/font-awesome.min.css">  
+    <link rel="stylesheet" type="text/css" href="styling/main.scss"></link>
+
+    <meta name="google-signin-client_id" content="408808440333-d8l43n163vfdnti944qp9t9o8cp5qkag.apps.googleusercontent.com">
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="header">
+        <h1>Time tracker</h1>
+      </div>
+        
+      <div class="signin">        
+        <div class="g-signin2" data-onsuccess="onSignIn">
+        </div>
+        <div class="signout">    
+          <button onclick="signOut();">Sign out</button>
+        </div>
+      </div>
+        
+      <div id="project">
+        <label>Project name</label>
+        <input type="text" id="project_name" placeholder="Project name"></textfield>
+        <button id="project_button">Add new project</button>
+      </div>
+
+      <!--div id="users" class="column right">
+          <h3> Users </h3>
+      </div-->
+      
+      <div id="entries" class="column right">
+          <h3> Entries </h3>
+      </div>
+      
+      <div id="projects" class="column">
+          <h3> Projects </h3>
+      </div>
+            
+      <div id="results">
+      </div>
+
+    </div>
+  </body>
+</html>
